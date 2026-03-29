@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Three.js FPS</title>
+
+<style>
+body { margin:0; overflow:hidden; background:black; }
+
+#crosshair {
+  position:absolute;
+  top:50%; left:50%;
+  width:10px; height:10px;
+  margin-left:-5px; margin-top:-5px;
+  background:white;
+}
+
+/* joystick */
+#joystick {
+  position:absolute;
+  bottom:20px; left:20px;
+  width:150px; height:150px;
+}
+
+/* skills */
+#skills {
+  position:absolute;
+  bottom:20px; right:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.skill {
+  width:60px; height:60px;
+  border-radius:30px;
+  background:rgba(255,255,255,0.3);
+  color:white;
+  font-size:24px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+</style>
+</head>
+
+<body>
+
+<div id="crosshair"></div>
+<div id="joystick"></div>
+
+<div id="skills">
+  <div class="skill" id="fire">🔥</div>
+  <div class="skill" id="heal">💚</div>
+  <div class="skill" id="ult">💥</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160/build/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.9.0/nipplejs.min.js"></script>
+<script src="game.js"></script>
+
+</body>
+</html>
